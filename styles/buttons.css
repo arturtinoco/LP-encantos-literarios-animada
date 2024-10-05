@@ -1,0 +1,37 @@
+.button-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--pink-dark);
+
+    width: fit-content;
+    height: 2.5rem;
+    border-radius: .5rem;
+
+    padding-inline: 1.25rem;
+
+    position: relative;
+    overflow: hidden;
+
+    & span {
+        z-index: 1;
+    }
+
+    &:hover::after {
+        scale: 1;
+    }
+
+    &::after {
+        content: "";
+        background-color: var(--pink-base);
+
+        width: 110%;
+        height: 200%;
+        border-radius: 50%;
+
+        scale: 0;
+        transition: scale 500ms;
+        
+        position: absolute;
+        left: -5%;
+    }
+}

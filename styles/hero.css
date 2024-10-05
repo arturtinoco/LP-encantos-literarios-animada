@@ -1,0 +1,229 @@
+#hero {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 90rem;
+    height: 95.25rem;
+    position: relative;
+    background: url(../assets/images/Blur.png) no-repeat top center/cover;
+
+    & header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70rem;
+        height: fit-content;
+        color: var(--text-title);
+        margin-inline: auto;
+        margin-top: 3.5rem;
+
+        & img.desktop { display: block; }
+        & img.mobile { display: none; }
+    }
+
+    & #title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        width: 41rem;
+        height: 12.5rem;
+        text-align: center;
+        margin-inline: auto;
+        margin-top: 10.25rem;
+
+        & h1 {
+            color: var(--text-title);
+            height: 7rem;
+            animation: fade-in 2s 500ms ease-in forwards;
+            opacity: 0;
+        }
+
+        & p {
+            width: 35.5rem;
+            animation: fade-in 2s 600ms ease-in forwards;
+            opacity: 0;
+        }
+    }
+
+    & #hero-background {
+        display: block;
+        background: url(../assets/images/hero-background.png) no-repeat top center/cover;
+        width: 100%;
+        height: 59.25rem;
+        position: absolute;
+        margin: 0;
+        z-index: -1;
+        opacity: 0;
+        animation: fade-in 2s ease-in forwards;
+    }
+
+    & #product-info {
+        width: 75rem;
+        height: 25rem;
+        margin-inline: auto;
+        margin-top: 35.375rem;
+        position: relative;
+        
+
+        & img[src*="ouija"] {
+            width: 5rem;
+            height: 5rem;
+            position: absolute;
+            left: 2.125rem;
+            top: 14.75rem;
+            rotate: 99.47deg;
+            opacity: 0;
+            scale: 0;
+            transition: rotate 500ms ease-in-out, transform 500ms ease-in-out;
+            animation: disappear 500ms;
+
+            &:hover {
+                rotate: calc(99.47deg + 15deg);
+                transform: scale(1.1);
+                transition: rotate 500ms ease-in-out, transform 500ms ease-in-out;
+            }
+        }
+
+        & img[src*="book"] {
+            width: 5.5rem;
+            height: 5.5rem;
+            position: absolute;
+            left: 33.125rem;
+            top: 1rem;
+            rotate: 20.76deg;
+            opacity: 0;
+            scale: 0;
+            transition: rotate 500ms ease-in-out, transform 500ms ease-in-out;
+            animation: disappear 500ms forwards;
+
+            &:hover {
+                &:hover {
+                    rotate: calc(20.76deg + 13deg);
+                    transform: scale(1.1);
+                    transition: rotate 500ms ease-in-out, transform 500ms ease-in-out;
+                }
+            }
+        }
+
+        & img[src*="ball"] {
+            width: 4.5rem;
+            height: 4.5rem;
+            position: absolute;
+            left: 69.75rem;
+            top: 14.75rem;
+            rotate: -14.48deg;
+            opacity: 0;
+            scale: 0;
+            transition: rotate 500ms ease-in-out, transform 500ms ease-in-out;
+            animation: disappear 500ms forwards;
+
+            &:hover {
+                &:hover {
+                    &:hover {
+                        rotate: calc(-14.48deg + 11deg);
+                        transform: scale(1.1);
+                        transition: rotate 500ms ease-in-out, transform 500ms ease-in-out;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            
+            & img[src*="book"] {
+                animation: appear 250ms ease-in forwards;
+            }
+            
+            & img[src*="ouija"] {
+                animation: appear 250ms 500ms ease-in forwards;
+            }
+
+            & img[src*="ball"] {
+                animation: appear 250ms 1s ease-in forwards;
+            }
+
+            & h2:nth-child(1) {
+                animation: unfilter 250ms linear forwards;
+
+                & span {
+                    animation: unfilter 250ms linear forwards;
+                }
+            }
+
+            & h2:nth-child(2) {
+                animation: unfilter 250ms 500ms linear forwards;
+                
+                & span {
+                    animation: unfilter 250ms 500ms linear forwards;
+                }
+            }
+
+            & h2:nth-child(3) {
+                animation: unfilter 250ms 1s linear forwards;
+
+                & span {
+                    animation: unfilter 250ms 1s linear forwards;
+                }
+            }
+
+        }
+
+        & div {
+            margin-top: 7.125rem;
+            text-align: center;
+            
+            & h2 {
+                display: inline;
+                filter: brightness(50%) grayscale(100%);
+    
+                & span {
+                    color: var(--blue-light);
+                    font-weight: 700;
+                    filter: brightness(200%);
+                }
+            }
+        }
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes unfilter {
+    to {
+        filter: none;
+    }
+}
+
+@keyframes appear {
+    0% {
+        scale: .5;
+        opacity: .1;
+    }
+
+    80% {
+        scale: 1.2;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes disappear {
+    from {
+        scale: 1;
+        opacity: 1;
+    } to {
+        scale: 0;
+        opacity: 0;
+    }
+}

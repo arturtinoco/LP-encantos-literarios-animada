@@ -1,0 +1,48 @@
+
+.title-lg {
+    font: var(--title-lg);
+}
+
+.title-md {
+    font: var(--title-md);
+}
+
+.title-sm {
+    font: var(--title-sm);
+}
+
+.title-xs {
+    font: var(--title-xs);
+}
+
+.subtitle {
+    font: var(--subtitle);
+}
+
+.body-lg {
+    font: var(--body-lg);
+}
+
+.body-md {
+    font: var(--body-md);
+}
+
+.body-sm {
+    font: var(--body-sm);
+}
+
+.body-xs {
+    font: var(--body-xs);
+}
+
+.button {
+    font: var(--button);
+}
+
+.link {
+    font: var(--link);
+}
+
+.tag {
+    font: var(--tag);
+}

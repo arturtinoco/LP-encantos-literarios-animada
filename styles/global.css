@@ -27,18 +27,36 @@
 
     --font-family: "Raleway", sans-serif;
 
-    --title-lg: 700 3rem/auto var(--font-family);
-    --title-md: 700 2.5rem/auto var(--font-family);
-    --title-sm: 700 2rem/auto var(var(--font-family));
-    --title-xs: 700 1rem/auto var(--font-family);
+    --title-lg: 700 3rem/1 var(--font-family);
+    --title-md: 700 2.5rem/1 var(--font-family);
+    --title-sm: 700 2rem/1 var(--font-family);
+    --title-xs: 700 1rem/1 var(--font-family);
     --subtitle: 500 2rem/2 var(--font-family);
     
     --body-lg: 400 1.25rem/1.4 var(--font-family);
     --body-md: 400 1rem/1.4 var(--font-family);
-    --body-sm: 400 .875rem/1.4 var(var(--font-family));
+    --body-sm: 400 .875rem/1.4 var(--font-family);
     --body-xs: 400 .75rem/1.4 var(--font-family);
 
-    --buton: 700 .875rem/auto var(--font-family);
-    --link: 500 .875rem/auto var(var(--font-family));
-    --tag: 700 .625rem/auto var(--font-family);
+    --button: 700 .875rem/1 var(--font-family);
+    --link: 500 .875rem/1 var(--font-family);
+    --tag: 700 .625rem/1 var(--font-family);
+}
+
+body {
+    background-color: var(--shape-background);
+    color: var(--text-body);
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+#page {
+    max-width: 90rem;
+    margin-inline: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
