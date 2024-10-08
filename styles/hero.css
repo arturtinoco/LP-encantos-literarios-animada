@@ -5,7 +5,7 @@
     max-width: 90rem;
     height: 95.25rem;
     position: relative;
-    background: url(../assets/images/Blur.png) no-repeat top center/cover;
+    margin-inline: auto;
 
     & header {
         display: flex;
@@ -185,6 +185,14 @@
                 }
             }
         }
+    }
+
+    & .hero-blur {
+        background: url(../assets/images/Blur.png) no-repeat center center/cover;
+        width: 100%;
+        position: absolute;
+        inset: 0;
+        z-index: -2;
     }
 }
 

@@ -52,8 +52,10 @@ body {
 }
 
 #page {
+    width: 90rem;
     max-width: 90rem;
     margin-inline: auto;
+    overflow-x: hidden;
 }
 
 a {

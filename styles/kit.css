@@ -1,0 +1,181 @@
+#kit {
+    display: inline-block;
+    width: 90rem;
+    height: 99.125rem;
+    position: relative;
+
+    & header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: fit-content;
+        color: var(--text-title);
+        margin-inline: auto;
+
+        & svg {
+            width: 2rem;
+            height: 2rem;
+            filter: drop-shadow(0px 0px 28px #8f3b9e50);
+
+            & path {
+                fill: var(--pink-base);
+            }
+        }
+    }
+
+    & p {
+        width: fit-content;
+        margin-inline: auto;
+        margin-top: .5rem;
+    }
+
+    & .kit-container {
+        display: inline-block;
+        width: 100%;
+        height: 57.5rem;
+        margin-top: 5.5rem;
+
+        position: relative;
+
+        & img:nth-child(1) { /* book */
+            display: block;
+            width: 29.1875rem;
+            left: 31.5%;
+            margin-top: 134px;
+            position: relative;
+        }
+
+        & img[src*="bookmark"] {
+            display: block;
+            width: 10.75rem;
+            height: 33.5rem;
+            position: absolute;
+            
+            transition: all 400ms ease;
+        }
+
+        & img[src*="yellow"] {
+            left: 50%;
+            top: 18.5%;
+            z-index: -1;
+        }
+
+        & img[src*="purple"] {
+            left: 50%;
+            top: 21.5%;
+            z-index: -2;
+        }
+
+        & img[src*="pin"] {
+            width: 13.875rem;
+            position: absolute;
+            left: 34%;
+            bottom: 20%; /* final em 2.7% */
+            z-index: -1;
+            
+            transition: all 400ms ease;
+        }
+
+        & img[src*="arrow1"] {
+            position: absolute;
+            top: 20%;
+            left: 36%;
+            z-index: -3;
+            
+            transition: all 400ms ease;
+        }
+
+        & img[src*="arrow2"] {
+            position: absolute;
+            bottom: 35%;
+            left: 36%;
+            z-index: -3;
+            
+            transition: all 400ms ease;
+        }
+
+        & img[src*="arrow3"] {
+            position: absolute;
+            bottom: 25%;
+            right: 40%;
+            z-index: -3;
+            
+            transition: all 400ms ease;
+        }
+
+        & p {
+            color: var(--text-title);
+            position: absolute;
+            margin: 0;
+            z-index: -4;
+
+            &#p1 {
+                left: 36%;
+                top: 20%;
+                transition: all 400ms ease;
+            }
+
+            &#p2 {
+                left: 36%;
+                bottom: 50%;
+                transition: all 400ms ease;
+            }
+
+            &#p3 {
+                right: 40%;
+                bottom: 30%;
+                transition: all 400ms ease;
+            }
+        }
+
+        &:hover {
+            & img[src*="bookmark-yellow"] { /* yellow-bookmark */
+                transform: translate(82%, -20%) rotate(10deg);
+            }
+
+            & img[src*="bookmark-purple"] { /* purple-bookmark */
+                transform: translate(142%, -6%) rotate(20deg);
+            }
+
+            & img[src*="pin"] {
+                transform: translate(-79%, 39%) rotate(-5deg);
+            }
+
+            & img[src*="arrow1"] {
+                transform: translate(-115%, -205%);
+            }
+
+            & img[src*="arrow2"] {
+                transform: translate(-230%, 22%);
+            }
+
+            & img[src*="arrow3"] {
+                transform: translate(140%, 90%);
+            }
+
+            & #p1 {
+                transform: translate(-200%, -470%);
+            }
+
+            & #p2 {
+                transform: translate(-210%, 100%);
+            }
+
+            & #p3 {
+                transform: translate(89%, 1000%);
+            }
+        }
+
+    }
+
+    & .kit-blur {
+        background: url(../assets/images/monthly-blur.png) no-repeat center center/cover;
+        scale: 1.5;
+        width: 58.125rem;
+        height: 58.125rem;
+        position: absolute;
+        z-index: -3;
+        inset: 0;
+        margin-inline: auto;
+    }
+}
