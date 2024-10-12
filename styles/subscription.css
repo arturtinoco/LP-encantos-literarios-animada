@@ -1,0 +1,337 @@
+#subscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 77.125rem;
+
+    background: url(../assets/images/subscription-blur.svg) no-repeat center/cover;
+
+    & h3 {
+        width: 18.375rem;
+        color: var(--text-title);
+        text-align: center;
+        margin-top: 12.125rem;
+    }
+
+    & .card-container {
+        display: flex;
+        justify-content: center;
+
+        width: 65.625rem;
+        height: 37.875rem;
+
+        padding-top: 3.5rem;
+        margin-top: 3.5rem;
+
+        position: relative;
+
+        & .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            width: 18rem;
+            height: 26rem;
+            background-color: var(--shape-base);
+
+            border: 1px solid var(--shape-stroke);
+            border-radius: 1.5rem;
+            padding: 2rem 2rem 1.75rem;
+
+            position: absolute;
+            transition: background-color 400ms ease-out;
+            
+
+            & header {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+
+                & span {
+                    color: var(--blue-light);
+                }
+
+                & .price {
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
+
+                    & h4 {
+                        color: var(--text-title);
+
+                        & span {
+                            color: var(--text-title);
+                        }
+                    }
+
+                    & h5 {
+                        color: var(--text-label);
+                    }
+                }
+            }
+
+            & .details {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                width: 100%;
+                
+                & .details-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: .75rem;
+
+                    & li {
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+
+                        & svg {
+                            width: .875rem;
+                            height: .875rem;
+                            filter: drop-shadow(1px 1px 12px rgba(135, 47, 151, 0.35));
+
+                            & path {
+                                fill: var(--blue-base);
+                            }
+                        }
+                    }
+                }
+
+                & a.sub-btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    color: var(--text-title);
+                    background-color: var(--blue-dark);
+
+                    width: 100%;
+                    height: 2.5rem;
+                    border-radius: .5rem;
+
+                    padding-inline: 1.25rem;
+                    margin-inline: auto;
+                }
+            }
+
+            & img {
+                position: absolute;
+            }
+
+            &#mensal {
+                z-index: 1;
+                animation: slide-left-reverse 300ms ease-in backwards;
+                
+
+                & svg:nth-child(3),
+                & svg:nth-child(4) {
+                    position: absolute;
+                    rotate: 0;
+                    transition: rotate 500ms;
+
+                    & path {
+                        fill: var(--pink-base);
+                    }
+                }
+
+                & svg:nth-child(3) {
+                    width: 1.625rem;
+                    height: 1.625rem;
+                    left: -15%;
+                    top: -6%;
+                }
+
+                & svg:nth-child(4) {
+                    scale: .325;
+                    left: -20%;
+                    top: 0%;
+                }
+
+                &:hover {
+                    z-index: 3;
+
+                    & svg:nth-child(3) {
+                        rotate: -12deg;
+                    }
+
+                    & svg:nth-child(4) {
+                        rotate: 12deg;
+                    }
+                }
+            }
+
+            &#semestral {
+                z-index: 2;
+                animation: land 300ms ease-in backwards;
+
+                & header {
+                    & span {
+                        color: var(--pink-light);
+                    }
+
+                    & .price {
+                        & h4 {
+                            & span {
+                                color: var(--text-title);
+                            }
+                        }
+                    }
+                }
+
+                & .details {
+
+                    & .details-list {
+
+                        & li {
+
+                            & svg path {
+                                fill: var(--pink-base);
+                            }
+                        }
+                    }
+
+                    & a.sub-btn {
+                        background-color: var(--pink-dark);
+                    }
+                }
+
+                & #pop-tag {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 5.625rem;
+                    height: 1.875rem;
+                    background-color: var(--shape-stroke);
+                    border-radius: 999px;
+
+                    text-transform: uppercase;
+                    letter-spacing: 0.05rem;
+                    padding: .5rem 1.25rem;
+
+                    position: absolute;
+                    right: 6%;
+                    top: 5.5%;
+                }
+
+                & img {
+                    left: 14%;
+                    top: -12%;
+                }
+
+                &:hover {
+                    animation: rise 500ms ease-out forwards;
+                }
+            }
+
+            &#anual  {
+                top: inherit;
+                z-index: 1;
+                transform: unset;
+                animation:  slide-right-reverse 300ms ease-in backwards;
+
+                & svg:nth-child(3),
+                & svg:nth-child(4) {
+                    position: absolute;
+                    rotate: 0;
+                    transition: rotate 500ms;
+
+                    & path {
+                        fill: var(--pink-base);
+                    }
+                }
+
+                & svg:nth-child(3) {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    right: -15%;
+                    bottom: -4%;
+                }
+                & svg:nth-child(4) {
+                    scale: .3;
+                    right: -6%;
+                    bottom: -10%;
+                }
+
+                &:hover {
+                    z-index: 3;
+
+                    & svg:nth-child(3) {
+                        rotate: 12deg;
+                    }
+
+                    & svg:nth-child(4) {
+                        rotate: -12deg;
+                    }
+                }
+            }
+
+            &:hover {
+                background-color: var(--shape-hover);
+                border-color: var(--shape-hover);
+                filter: drop-shadow(0 0 50px rgba(36, 96, 128, 0.5));
+            }
+        }
+
+        &:hover { /* container */
+            
+            & #mensal {
+                animation: slide-left 400ms ease-out forwards;
+            }
+
+            & #anual {
+                animation:  slide-right 400ms ease-out forwards;
+            }
+        }
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: unset;
+    } to {
+        transform: translate(-100%, 15%) rotate(-8deg);
+    }
+}
+
+@keyframes slide-left-reverse {
+    from {
+        transform: translate(-100%, 15%) rotate(-8deg);
+    } to {
+        transform: initial;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: unset;
+    } to {
+        transform: translate(100%, 15%) rotate(8deg);
+    }
+}
+
+@keyframes slide-right-reverse {
+    from {
+        transform: translate(100%, 15%) rotate(8deg);
+    } to {
+        transform: initial;
+    }
+}
+
+@keyframes rise {
+    from {
+        transform: unset;
+    } to {
+        transform: translateY(-1.5rem);
+    }
+}
+
+@keyframes land {
+    from {
+        transform: translateY(-1.5rem);
+    } to {
+        transform: unset;
+    }
+}

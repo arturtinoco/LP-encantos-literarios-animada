@@ -18,7 +18,7 @@
 
     --shape-stroke: #002347;
     --shape-hover: #001933;
-    --shape--base: #000F1F;
+    --shape-base: #000F1F;
     --shape-background: #00050A;
 
     --text-title: #F8FBFB;
@@ -61,4 +61,8 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+ul[role="list"] {
+    list-style: none;
 }
