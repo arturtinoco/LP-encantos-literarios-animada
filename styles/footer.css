@@ -1,0 +1,104 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 415px;
+
+    background: url(../assets/images/book-trace-background.png) no-repeat center/cover;
+
+    & .brand {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+
+        width: 16.5rem;
+
+        margin: 10.625rem 10rem;
+
+        & img.desktop {
+            display: block;
+            width: 16.5rem;
+        }
+
+        & img.mobile { display: none; }
+
+        & .divider {
+            width: 100%;
+            height: 1px;
+            background-color: var(--shape-stroke);
+        }
+    
+        & .social {
+            display: flex;
+            justify-content: space-around;
+    
+            width: 100%;
+            height: 2.5rem;
+    
+            & a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+    
+                background-color: transparent;
+                transition: background-color 300ms ease-out;
+    
+                & svg {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    /*filter: saturate(200%) brightness(80%);*/
+    
+                    & path {
+                        fill: var(--blue-light);
+                        transition: fill 300ms ease-out;
+                    }
+                }
+    
+                &:hover {
+                    background-color: var(--shape-stroke);
+    
+                    & svg path {
+                        fill: var(--text-body);
+                    }
+                }
+            }
+        }
+    }
+
+    & .links {
+        display: flex;
+        gap: 3.5rem;
+
+        padding-top: .5rem;
+        margin: 10.625rem 10rem;
+
+        & nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+
+            width: 8rem;
+
+            & ul {
+                display: flex;
+                flex-direction: column;
+                gap: .75rem;
+
+                & li {
+                    color: var(--blue-light);
+                    transition: color 300ms ease-out;
+
+                    &:hover {
+                        color: var(--text-body);
+                    }
+                }
+            }
+        }
+    }
+}
