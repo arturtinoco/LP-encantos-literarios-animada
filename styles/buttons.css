@@ -1,9 +1,10 @@
 .button-container {
     display: flex;
+    justify-content: center;
     align-items: center;
     background-color: var(--pink-dark);
 
-    width: fit-content;
+    min-width: fit-content;
     height: 2.5rem;
     border-radius: .5rem;
 
@@ -33,5 +34,13 @@
         
         position: absolute;
         left: -5%;
+    }
+
+    &.blue {
+        background-color: var(--blue-dark);
+
+        &::after {
+            background-color: var(--blue-mid);
+        }
     }
 }
