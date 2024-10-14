@@ -52,7 +52,7 @@ body {
 }
 
 #page {
-    width: 90rem;
+    width: 100vw;
     max-width: 90rem;
     margin-inline: auto;
     overflow-x: hidden;
@@ -65,4 +65,14 @@ a {
 
 ul[role="list"] {
     list-style: none;
+}
+
+@media (width < 44.5rem) {
+    & #page {
+        display: flex;
+        flex-direction: column;
+
+        min-width: 23.4375rem;
+        max-width: 44.5rem;
+    }
 }

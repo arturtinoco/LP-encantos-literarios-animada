@@ -335,3 +335,83 @@
         transform: unset;
     }
 }
+
+@media (width < 44.5rem) {
+    & #subscription {
+        height: 37.5rem;
+
+        & h3 {
+            width: 13.875rem;
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        & .card-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+    
+            width: 100%;
+            height: 34.5rem;
+    
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+
+            overflow-x: scroll;
+
+            & .card {
+                display: grid;
+                min-width: 17rem;
+                width: 17rem;
+                height: 25rem;
+                position: relative;
+
+                & header {
+
+                    & .price {
+    
+                        & h4 {
+                            font-size: 2.4rem;
+                        }
+                    }
+                }
+
+                & img,
+                & svg {
+                    display: none;
+                }
+
+                &#mensal {
+                    order: 1;
+                    margin-left: 3.25rem;
+                    animation: none;
+                }
+
+                &#semestral {
+                    order: 2;
+                    animation: none;
+                }
+
+                &#anual {
+                    order: 3;
+                    animation: none;
+                }
+            }
+
+            &:hover { /* container */
+            
+                & #mensal {
+                    animation: none;
+                }
+
+                & #semestral {
+                    animation: none;
+                }
+    
+                & #anual {
+                    animation: none;
+                }
+            }
+        }
+    }
+}

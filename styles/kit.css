@@ -70,7 +70,7 @@
             width: 13.875rem;
             position: absolute;
             left: 34%;
-            bottom: 20%; /* final em 2.7% */
+            bottom: 20%;
             z-index: -1;
             
             transition: all 400ms ease;
@@ -177,5 +177,104 @@
         z-index: -3;
         inset: 0;
         margin-inline: auto;
+    }
+}
+
+@media (width < 44.5rem) {
+    & #kit {
+        width: 100%;
+        height: 39.4375rem;
+        margin-top: 6.5rem;
+
+        & header {
+            gap: .75rem;
+
+            & svg {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+
+            & h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        & p {
+            font-size: .875rem;
+        }
+
+        & .kit-container {
+            height: 19.9375rem;
+            margin-top: 4rem;
+
+            & img {
+                scale: .335;
+            }
+
+            & img:nth-child(1) {
+                left: -18%;
+                top: -50%;
+                margin-top: 0;
+            }
+
+            & img[src*="yellow"] {
+                left: 32%;
+                top: -38%;
+            }
+
+            & img[src*="purple"] {
+                left: 32%;
+                top: -38%;
+            }
+
+            & img[src*="pin"] {
+                left: 7%;
+                bottom: -4%;
+            }
+
+            & img[src*="arrow1"] {
+                top: 16%;
+                left: 13%;
+            }
+
+            & img[src*="arrow2"] {
+                bottom: 23%;
+                left: 20%;
+            }
+
+            & img[src*="arrow3"] {
+                bottom: 15%;
+                right: 26%;
+            }
+
+            & p {
+                font-size: .625rem;
+
+                &#p1 {
+                    left: 30%;
+                }
+            }
+
+            &:hover {
+                & #p1 {
+                    transform: translate(-120%, -300%);
+                }
+    
+                & #p2 {
+                    transform: translate(-150%, 20%);
+                }
+    
+                & #p3 {
+                    transform: translate(75%, 430%);
+                }
+            }
+        }
+
+        & .kit-blur {
+            background: url(../assets/images/monthly-blur.png) no-repeat center center/cover;
+            width: 18.625rem;
+            height: 18.625rem;
+            margin-top: 8rem;
+        }
     }
 }

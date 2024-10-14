@@ -17,12 +17,10 @@ footer {
 
         margin: 10.625rem 10rem;
 
-        & img.desktop {
+        & img {
             display: block;
             width: 16.5rem;
         }
-
-        & img.mobile { display: none; }
 
         & .divider {
             width: 100%;
@@ -99,6 +97,31 @@ footer {
                     }
                 }
             }
+        }
+    }
+}
+
+@media (width < 44.5rem) {
+    & footer {
+        display: grid;
+        justify-content: center;
+
+        & .brand {
+            width: 19.5rem;
+
+            margin: 6.125rem 2rem 0;
+
+            & img {
+                width: auto;
+                height: 2.5rem;
+                margin-inline: auto;
+            }
+        }
+
+        & .links {
+            gap: 1.5rem;
+            padding-top: 0;
+            margin: 0 auto;
         }
     }
 }
