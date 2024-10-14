@@ -3,7 +3,7 @@ Desafio prático desenvolvido durante Formação Full-Stack promovida pela Rocke
 ___
 ## 🔖 Layout direcionado para página de clube de assinatura
   
-![Gif de demonstração do Formulário de Convite](.gitconfig/LP-encantos-literarios-preview.gif)
+![Gif de demonstração da Landing Page Encantos Literários](.gitconfig/LP-encantos-literarios-preview.gif)
   
 ___
 ### 🤖 Tecnologias e Recursos  
